@@ -5,7 +5,7 @@ import (
 	"encoding/json"
 	"errors"
 	"flag"
-	"fmt"
+	//"fmt"
 	"log"
 	"net/url"
 	"strconv"
