@@ -12,8 +12,8 @@ import (
 	"strings"
 
 	"github.com/gorilla/websocket"
-	mod "github.com/peertone/scattergo/model"
-	util "github.com/peertone/scattergo/util"
+	mod "github.com/peertone/scatter-go/model"
+	util "github.com/peertone/scatter-go/util"
 )
 
 const APPKEY_ID_LENGTH = 24
