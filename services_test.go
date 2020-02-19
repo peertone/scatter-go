@@ -72,17 +72,8 @@ func TestGetSignature(t *testing.T) {
 
 func getTranasaction(actor string, permission string) *eos.Transaction {
 	//actual transaction for smart contract should be created
-	/*txOpts := &eos.TxOptions{}
-	txn := eos.NewTransaction([]*eos.Action{}, txOpts) */
-	fileDetails := eosapi.UserDetails{UserName: eos.AccountName("testinguser1"), UserStruct: eosapi.User{UserName: eos.AccountName("testinguser1"), PublicKey: "---EOS6Mdf8Ry2SAFrpp6kXkQD4JtGe4h933hW4C96LV6PhQLrAXLKLv---", Activated: false}}
-	api := eos.New("https://api.jungle.alohaeos.com:443")
 	txOpts := &eos.TxOptions{}
-	if err := txOpts.FillFromChain(api); err != nil {
-		panic(fmt.Errorf("filling tx opts: %s", err))
-	}
-	txn := eos.NewTransaction([]*eos.Action{{Account: eos.AccountName("testinguser1"), Name: eos.ActionName("adduser"), Authorization: []eos.PermissionLevel{
-		{eos.AccountName(actor), eos.PermissionName(permission)},
-	}, ActionData: eos.NewActionData(fileDetails)}}, txOpts)
+	txn := eos.NewTransaction([]*eos.Action{}, txOpts)
 	return txn
 }
 
