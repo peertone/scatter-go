@@ -5,7 +5,6 @@ import (
 	"fmt"
 	"testing"
 
-	eosapi "./eosapi"
 	mod "./model"
 	eos "github.com/eoscanada/eos-go"
 	"github.com/stretchr/testify/assert"
